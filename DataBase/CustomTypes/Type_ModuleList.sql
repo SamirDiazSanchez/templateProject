@@ -1,0 +1,3 @@
+CREATE TYPE [Type_ModuleList] AS TABLE (
+	[ModuleId] UNIQUEIDENTIFIER
+)

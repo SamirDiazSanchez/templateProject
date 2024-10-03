@@ -1,0 +1,18 @@
+{
+  "version": 2,
+  "dgSpecHash": "doMhTDFM2Q8=",
+  "success": true,
+  "projectFilePath": "c:\\Users\\User\\Desktop\\Repositories\\TemplateProject\\DataBase\\DataBase.sqlproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\User\\.nuget\\packages\\microsoft.netframework.referenceassemblies\\1.0.0\\microsoft.netframework.referenceassemblies.1.0.0.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\microsoft.netframework.referenceassemblies.net45\\1.0.0\\microsoft.netframework.referenceassemblies.net45.1.0.0.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1900",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Error al obtener los datos de vulnerabilidad del paquete: No se puede cargar el índice de servicio del origen https://pkgs.dev.azure.com/TPGlobal-TAP/c23477b2-acf4-45ee-9c79-399722792b88/_packaging/SolutionDelivery/nuget/v3/index.json."
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "format": 1,
+  "restore": {
+    "c:\\Users\\User\\Desktop\\Repositories\\TemplateProject\\DataBase\\DataBase.sqlproj": {}
+  },
+  "projects": {
+    "c:\\Users\\User\\Desktop\\Repositories\\TemplateProject\\DataBase\\DataBase.sqlproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "c:\\Users\\User\\Desktop\\Repositories\\TemplateProject\\DataBase\\DataBase.sqlproj",
+        "projectName": "TemplateProjectDatabase",
+        "projectPath": "c:\\Users\\User\\Desktop\\Repositories\\TemplateProject\\DataBase\\DataBase.sqlproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "c:\\Users\\User\\Desktop\\Repositories\\TemplateProject\\DataBase\\obj\\",
+        "projectStyle": "PackageReference",
+        "skipContentFileWrite": true,
+        "configFilePaths": [
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net45"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://pkgs.dev.azure.com/TPGlobal-TAP/c23477b2-acf4-45ee-9c79-399722792b88/_packaging/SolutionDelivery/nuget/v3/index.json": {}
+        },
+        "frameworks": {
+          "net45": {
+            "projectReferences": {}
+          }
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net45": {
+          "dependencies": {
+            "Microsoft.NETFramework.ReferenceAssemblies": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.0.0, )"
+            }
+          }
+        }
+      }
+    }
+  }
+}

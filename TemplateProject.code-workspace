@@ -1,0 +1,19 @@
+{
+	"folders": [
+		{
+			"path": "Backend"
+		},
+		{
+			"path": "DataBase"
+		},
+		{
+			"path": "Frontend"
+		}
+	],
+	"settings": {
+		"dataworkspace.excludedProjects": [
+			"DataBase/DataBaseTemplate/DataBaseTemplate.sqlproj",
+			"Template_project/Template_project.sqlproj"
+		]
+	}
+}

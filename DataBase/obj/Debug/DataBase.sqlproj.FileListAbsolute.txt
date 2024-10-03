@@ -1,0 +1,10 @@
+c:\Users\User\Desktop\Repositories\TemplateProject\DataBase\bin\Debug\DataBase.dacpac
+c:\Users\User\Desktop\Repositories\TemplateProject\DataBase\bin\Debug\TemplateProjectDatabase.dll
+c:\Users\User\Desktop\Repositories\TemplateProject\DataBase\bin\Debug\TemplateProjectDatabase.pdb
+c:\Users\User\Desktop\Repositories\TemplateProject\DataBase\obj\Debug\DataBase.sqlproj.AssemblyReference.cache
+c:\Users\User\Desktop\Repositories\TemplateProject\DataBase\obj\Debug\Model.xml
+c:\Users\User\Desktop\Repositories\TemplateProject\DataBase\obj\Debug\refactor.xml
+c:\Users\User\Desktop\Repositories\TemplateProject\DataBase\obj\Debug\postdeploy.sql
+c:\Users\User\Desktop\Repositories\TemplateProject\DataBase\obj\Debug\predeploy.sql
+c:\Users\User\Desktop\Repositories\TemplateProject\DataBase\obj\Debug\TemplateProjectDatabase.dll
+c:\Users\User\Desktop\Repositories\TemplateProject\DataBase\obj\Debug\TemplateProjectDatabase.pdb

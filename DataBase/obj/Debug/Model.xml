@@ -1,0 +1,2886 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataSchemaModel FileFormatVersion="1.2" SchemaVersion="2.9" DspName="Microsoft.Data.Tools.Schema.Sql.Sql160DatabaseSchemaProvider" CollationLcid="1033" CollationCaseSensitive="False" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+	<Header>
+		<CustomData Category="AnsiNulls">
+			<Metadata Name="AnsiNulls" Value="True" />
+		</CustomData>
+		<CustomData Category="QuotedIdentifier">
+			<Metadata Name="QuotedIdentifier" Value="True" />
+		</CustomData>
+		<CustomData Category="CompatibilityMode">
+			<Metadata Name="CompatibilityMode" Value="160" />
+		</CustomData>
+		<CustomData Category="Reference" Type="Assembly">
+			<Metadata Name="LogicalName" Value="TemplateProjectDatabase.dll" />
+			<Metadata Name="FileName" Value="c:\Users\User\Desktop\Repositories\TemplateProject\DataBase\obj\Debug\TemplateProjectDatabase.dll" />
+			<Metadata Name="AssemblyName" Value="TemplateProjectDatabase" />
+			<Metadata Name="PermissionSet" Value="SAFE" />
+			<Metadata Name="Owner" Value="" />
+			<Metadata Name="GenerateSqlClrDdl" Value="True" />
+			<Metadata Name="IsVisible" Value="True" />
+			<Metadata Name="IsModelAware" Value="True" />
+			<Metadata Name="SkipCreationIfEmpty" Value="True" />
+			<Metadata Name="AssemblySymbolsName" Value="c:\Users\User\Desktop\Repositories\TemplateProject\DataBase\obj\Debug\TemplateProjectDatabase.pdb" />
+		</CustomData>
+		<CustomData Category="SqlCmdVariables" Type="SqlCmdVariable" />
+	</Header>
+	<Model>
+		<Element Type="SqlDatabaseOptions">
+			<Property Name="Collation" Value="SQL_Latin1_General_CP1_CI_AS" />
+			<Property Name="IsAnsiNullDefaultOn" Value="True" />
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Property Name="IsAnsiWarningsOn" Value="True" />
+			<Property Name="IsArithAbortOn" Value="True" />
+			<Property Name="IsConcatNullYieldsNullOn" Value="True" />
+			<Property Name="IsTornPageProtectionOn" Value="False" />
+			<Property Name="IsFullTextEnabled" Value="True" />
+			<Property Name="PageVerifyMode" Value="3" />
+			<Property Name="DefaultLanguage" Value="" />
+			<Property Name="DefaultFullTextLanguage" Value="" />
+			<Property Name="QueryStoreStaleQueryThreshold" Value="367" />
+			<Relationship Name="DefaultFilegroup">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[PRIMARY]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlDefaultConstraint">
+			<Property Name="DefaultExpressionScript">
+				<Value><![CDATA[1]]></Value>
+			</Property>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[Module]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForColumn">
+				<Entry>
+					<References Name="[dbo].[Module].[IsActive]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="5" />
+		</Element>
+		<Element Type="SqlDefaultConstraint">
+			<Property Name="DefaultExpressionScript">
+				<Value><![CDATA[1]]></Value>
+			</Property>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[Profile_Module]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForColumn">
+				<Entry>
+					<References Name="[dbo].[Profile_Module].[IsActive]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="6" />
+		</Element>
+		<Element Type="SqlDefaultConstraint">
+			<Property Name="DefaultExpressionScript">
+				<Value><![CDATA[1]]></Value>
+			</Property>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[User]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForColumn">
+				<Entry>
+					<References Name="[dbo].[User].[IsActive]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="7" />
+		</Element>
+		<Element Type="SqlDefaultConstraint">
+			<Property Name="DefaultExpressionScript">
+				<Value><![CDATA[1]]></Value>
+			</Property>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[Profile]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForColumn">
+				<Entry>
+					<References Name="[dbo].[Profile].[IsActive]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="8" />
+		</Element>
+		<Element Type="SqlPrimaryKeyConstraint">
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[Profile].[ProfileId]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[Profile]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="9" />
+		</Element>
+		<Element Type="SqlPrimaryKeyConstraint">
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[Profile_Module].[ProfileId]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[Profile_Module].[ModuleId]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[Profile_Module]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="10" />
+		</Element>
+		<Element Type="SqlPrimaryKeyConstraint">
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[User].[UserId]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[User]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="11" />
+		</Element>
+		<Element Type="SqlPrimaryKeyConstraint">
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[Module].[ModuleId]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[Module]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="12" />
+		</Element>
+		<Element Type="SqlUniqueConstraint">
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[User].[Email]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[User]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="13" />
+		</Element>
+		<Element Type="SqlUniqueConstraint">
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[Module].[ModuleName]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[Module]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="14" />
+		</Element>
+		<Element Type="SqlForeignKeyConstraint" Name="[dbo].[FK_MODULE_CREATED]">
+			<Relationship Name="Columns">
+				<Entry>
+					<References Name="[dbo].[Module].[UserCreated]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[Module]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForeignColumns">
+				<Entry>
+					<References Name="[dbo].[User].[UserId]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForeignTable">
+				<Entry>
+					<References Name="[dbo].[User]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="15" />
+		</Element>
+		<Element Type="SqlForeignKeyConstraint" Name="[dbo].[FK_MODULE_UPDATED]">
+			<Relationship Name="Columns">
+				<Entry>
+					<References Name="[dbo].[Module].[UserUpdated]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[Module]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForeignColumns">
+				<Entry>
+					<References Name="[dbo].[User].[UserId]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForeignTable">
+				<Entry>
+					<References Name="[dbo].[User]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="16" />
+		</Element>
+		<Element Type="SqlForeignKeyConstraint" Name="[dbo].[FK_PROFILE_CREATED]">
+			<Relationship Name="Columns">
+				<Entry>
+					<References Name="[dbo].[Profile].[UserCreated]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[Profile]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForeignColumns">
+				<Entry>
+					<References Name="[dbo].[User].[UserId]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForeignTable">
+				<Entry>
+					<References Name="[dbo].[User]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="17" />
+		</Element>
+		<Element Type="SqlForeignKeyConstraint" Name="[dbo].[FK_PROFILE_MODULE_CREATED]">
+			<Relationship Name="Columns">
+				<Entry>
+					<References Name="[dbo].[Profile_Module].[UserCreated]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[Profile_Module]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForeignColumns">
+				<Entry>
+					<References Name="[dbo].[User].[UserId]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForeignTable">
+				<Entry>
+					<References Name="[dbo].[User]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="18" />
+		</Element>
+		<Element Type="SqlForeignKeyConstraint" Name="[dbo].[FK_PROFILE_MODULE_UPDATED]">
+			<Relationship Name="Columns">
+				<Entry>
+					<References Name="[dbo].[Profile_Module].[UserUpdated]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[Profile_Module]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForeignColumns">
+				<Entry>
+					<References Name="[dbo].[User].[UserId]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForeignTable">
+				<Entry>
+					<References Name="[dbo].[User]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="19" />
+		</Element>
+		<Element Type="SqlForeignKeyConstraint" Name="[dbo].[FK_PROFILE_UPDATED]">
+			<Relationship Name="Columns">
+				<Entry>
+					<References Name="[dbo].[Profile].[UserUpdated]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[Profile]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForeignColumns">
+				<Entry>
+					<References Name="[dbo].[User].[UserId]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForeignTable">
+				<Entry>
+					<References Name="[dbo].[User]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="20" />
+		</Element>
+		<Element Type="SqlForeignKeyConstraint" Name="[dbo].[FK_USER_CREATED]">
+			<Relationship Name="Columns">
+				<Entry>
+					<References Name="[dbo].[User].[UserCreated]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[User]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForeignColumns">
+				<Entry>
+					<References Name="[dbo].[User].[UserId]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForeignTable">
+				<Entry>
+					<References Name="[dbo].[User]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="21" />
+		</Element>
+		<Element Type="SqlForeignKeyConstraint" Name="[dbo].[FK_USER_UPDATED]">
+			<Relationship Name="Columns">
+				<Entry>
+					<References Name="[dbo].[User].[UserUpdated]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[User]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForeignColumns">
+				<Entry>
+					<References Name="[dbo].[User].[UserId]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForeignTable">
+				<Entry>
+					<References Name="[dbo].[User]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="22" />
+		</Element>
+		<Element Type="SqlTable" Name="[dbo].[Module]">
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Module].[ModuleId]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[uniqueidentifier]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<AttachedAnnotation Disambiguator="12" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Module].[ModuleName]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="150" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<AttachedAnnotation Disambiguator="14" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Module].[ModulePath]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="200" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Module].[Created]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[datetime]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Module].[Updated]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[datetime]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Module].[UserCreated]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[uniqueidentifier]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Module].[UserUpdated]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[uniqueidentifier]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Module].[IsActive]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[bit]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<AttachedAnnotation Disambiguator="5" />
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<AttachedAnnotation Disambiguator="15" />
+			<AttachedAnnotation Disambiguator="16" />
+		</Element>
+		<Element Type="SqlTable" Name="[dbo].[Profile]">
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Profile].[ProfileId]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[uniqueidentifier]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<AttachedAnnotation Disambiguator="9" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Profile].[ProfileName]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="100" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Profile].[Created]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[datetime]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Profile].[Updated]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[datetime]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Profile].[UserCreated]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[uniqueidentifier]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Profile].[UserUpdated]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[uniqueidentifier]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Profile].[IsActive]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[bit]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<AttachedAnnotation Disambiguator="8" />
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<AttachedAnnotation Disambiguator="17" />
+			<AttachedAnnotation Disambiguator="20" />
+		</Element>
+		<Element Type="SqlTable" Name="[dbo].[Profile_Module]">
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Profile_Module].[ProfileId]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[uniqueidentifier]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Profile_Module].[ModuleId]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[uniqueidentifier]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Profile_Module].[Created]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[datetime]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Profile_Module].[Updated]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[datetime]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Profile_Module].[UserCreated]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[uniqueidentifier]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Profile_Module].[UserUpdated]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[uniqueidentifier]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Profile_Module].[IsActive]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[bit]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<AttachedAnnotation Disambiguator="6" />
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<AttachedAnnotation Disambiguator="10" />
+			<AttachedAnnotation Disambiguator="18" />
+			<AttachedAnnotation Disambiguator="19" />
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[Save_Profile]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+BEGIN
+  SET NOCOUNT ON;
+  DECLARE @CurrentDate DATETIME = GETUTCDATE();
+
+  IF @UserCreated IS NULL
+  BEGIN
+    SET @ErrorCode = 1;
+    SET @ErrorMessage = 'Invalid parameter';
+    RETURN;
+  END
+
+  IF @ProfileName IS NULL
+  BEGIN
+    SET @ErrorCode = 2;
+    SET @ErrorMessage = 'Invalid parameter';
+    RETURN;
+  END
+
+  IF EXISTS (SELECT [ProfileId] FROM [Profile] WHERE [ProfileName] = @ProfileName)
+  BEGIN
+    SET @ErrorCode = 3;
+    SET @ErrorMessage = 'Invalid parameter';
+    RETURN;
+  END
+
+  IF EXISTS (SELECT [ModuleId] FROM @ModuleList WHERE [ModuleId] NOT IN (SELECT [ModuleId] FROM [Module]))
+  BEGIN
+    SET @ErrorCode = 4;
+    SET @ErrorMessage = 'Invalid parameter';
+    RETURN;
+  END
+
+  BEGIN TRANSACTION;
+  BEGIN TRY
+    SET @ProfileId = NEWID();
+
+    INSERT INTO [Profile_Module] (
+      [ProfileId],
+      [ModuleId],
+      [Created],
+      [Updated],
+      [UserCreated],
+      [UserUpdated]
+    )
+    SELECT
+      @ProfileId,
+      [ModuleId],
+      @CurrentDate,
+      @CurrentDate,
+      @UserCreated,
+      @UserCreated
+    FROM @ModuleList;
+
+    INSERT INTO [Profile]
+    (
+      [ProfileId],
+      [ProfileName],
+      [Created],
+      [Updated],
+      [UserCreated],
+      [UserUpdated]
+    )
+    VALUES
+   (
+     @ProfileId,
+     @ProfileName,
+     @CurrentDate,
+     @CurrentDate,
+     @UserCreated,
+     @UserCreated
+   );
+
+   COMMIT TRANSACTION;
+  END TRY
+  BEGIN CATCH
+    SET @ErrorCode = ERROR_NUMBER();
+    SET @ErrorMessage = ERROR_MESSAGE();
+
+    ROLLBACK TRANSACTION;
+  END CATCH
+END]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[datetime]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Save_Profile].[@UserCreated]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Save_Profile].[@ErrorCode]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Save_Profile].[@ErrorMessage]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Save_Profile].[@ProfileName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Profile]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Profile].[ProfileId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Profile].[ProfileName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Save_Profile].[@ModuleList]" Disambiguator="4" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Save_Profile].[@ModuleList].[ModuleId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Module]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Module].[ModuleId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Save_Profile].[@ProfileId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Profile_Module]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Profile_Module].[ProfileId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Profile_Module].[ModuleId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Profile_Module].[Created]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Profile_Module].[Updated]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Profile_Module].[UserCreated]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Profile_Module].[UserUpdated]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Save_Profile].[@ModuleList].[ModuleId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Profile]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Profile].[ProfileId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Profile].[ProfileName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Profile].[Created]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Profile].[Updated]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Profile].[UserCreated]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Profile].[UserUpdated]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="DynamicObjects">
+				<Entry>
+					<Element Type="SqlDynamicColumnSource" Name="[dbo].[Save_Profile].[@ModuleList]">
+						<Relationship Name="Columns">
+							<Entry>
+								<Element Type="SqlSimpleColumn" Name="[dbo].[Save_Profile].[@ModuleList].[ModuleId]">
+									<Relationship Name="TypeSpecifier">
+										<Entry>
+											<Element Type="SqlTypeSpecifier">
+												<Relationship Name="Type">
+													<Entry>
+														<References ExternalSource="BuiltIns" Name="[uniqueidentifier]" />
+													</Entry>
+												</Relationship>
+											</Element>
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[Save_Profile].[@ProfileName]">
+						<Property Name="DefaultExpressionScript">
+							<Value><![CDATA[NULL]]></Value>
+						</Property>
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[Save_Profile].[@ModuleList]" Disambiguator="4">
+						<Property Name="IsReadOnly" Value="True" />
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References Name="[dbo].[Type_ModuleList]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[Save_Profile].[@UserCreated]">
+						<Property Name="DefaultExpressionScript">
+							<Value><![CDATA[NULL]]></Value>
+						</Property>
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[uniqueidentifier]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[Save_Profile].[@ErrorCode]">
+						<Property Name="IsOutput" Value="True" />
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[Save_Profile].[@ErrorMessage]">
+						<Property Name="IsOutput" Value="True" />
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="IsMax" Value="True" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[Save_Profile].[@ProfileId]">
+						<Property Name="IsOutput" Value="True" />
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[uniqueidentifier]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="CreateOffset" Value="441" />
+				<Property Name="Length" Value="2294" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="/*&#xD;&#xA;================================================================================&#xD;&#xA;  File name          : Save_Profile.sql&#xD;&#xA;  Description        : save profile store procedure&#xD;&#xA;  Autor              : Samir Diaz&#xD;&#xA;  Created date       : 2-10-2024&#xD;&#xA;  Last update        : 2-10-2024 by Samir Diaz&#xD;&#xA;  Vertion            : 1.0&#xD;&#xA;  Notes              : notes&#xD;&#xA;================================================================================&#xD;&#xA;*/&#xD;&#xA;CREATE PROCEDURE [dbo].[Save_Profile]&#xD;&#xA;  @ProfileName VARCHAR(50) = NULL,&#xD;&#xA;  @ModuleList Type_ModuleList READONLY,&#xD;&#xA;  @UserCreated UNIQUEIDENTIFIER = NULL,&#xD;&#xA;  @ErrorCode INT OUT,&#xD;&#xA;  @ErrorMessage VARCHAR(MAX) OUT,&#xD;&#xA;  @ProfileId UNIQUEIDENTIFIER OUT&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[Save_User]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+BEGIN
+  SET NOCOUNT ON;
+  DECLARE @CurrentDate DATETIME = GETUTCDATE();
+
+  IF @UserCreated IS NULL
+  BEGIN
+    SET @ErrorCode = 1;
+    SET @ErrorMessage = 'Invalid parameter';
+    RETURN;
+  END
+
+  IF @Email IS NULL
+  BEGIN
+    SET @ErrorCode = 2;
+    SET @ErrorMessage = 'Invalid parameter';
+    RETURN;
+  END
+
+  IF @UserName IS NULL
+  BEGIN
+    SET @ErrorCode = 3;
+    SET @ErrorMessage = 'Invalid parameter';
+    RETURN;
+  END
+
+  IF @Password IS NULL
+  BEGIN
+    SET @ErrorCode = 4;
+    SET @ErrorMessage = 'Invalid parameter';
+    RETURN;
+  END
+
+  IF EXISTS (SELECT [UserId] FROM [User] WHERE [Email] = @Email)
+  BEGIN
+    SET @ErrorCode = 5;
+    SET @ErrorMessage = 'Invalid parameter';
+    RETURN;
+  END
+
+  IF @ProfileId IS NOT NULL AND NOT EXISTS (SELECT [ProfileId] FROM [Profile] WHERE [ProfileId] = @ProfileId)
+  BEGIN
+    SET @ErrorCode = 6;
+    SET @ErrorMessage = 'Invalid parameter';
+    RETURN;
+  END
+
+  BEGIN TRANSACTION;
+  BEGIN TRY
+    SET @UserId = NEWID();
+
+    INSERT INTO [User]
+    (
+      [UserId],
+      [Email],
+      [UserName],
+      [Password],
+      [ProfileId],
+      [Created],
+      [Updated],
+      [UserCreated],
+      [UserUpdated]
+    )
+    VALUES
+   (
+     @UserId,
+     @Email,
+     @UserName,
+     @Password,
+     @ProfileId,
+     @CurrentDate,
+     @CurrentDate,
+     @UserCreated,
+     @UserCreated
+   );
+
+   COMMIT TRANSACTION;
+  END TRY
+  BEGIN CATCH
+    SET @ErrorCode = ERROR_NUMBER();
+    SET @ErrorMessage = ERROR_MESSAGE();
+
+    ROLLBACK TRANSACTION;
+  END CATCH
+END]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[datetime]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Save_User].[@UserCreated]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Save_User].[@ErrorCode]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Save_User].[@ErrorMessage]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Save_User].[@Email]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Save_User].[@UserName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Save_User].[@Password]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[User]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[User].[UserId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[User].[Email]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Save_User].[@ProfileId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Profile]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Profile].[ProfileId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Save_User].[@UserId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[User]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[User].[UserId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[User].[Email]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[User].[UserName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[User].[Password]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[User].[ProfileId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[User].[Created]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[User].[Updated]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[User].[UserCreated]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[User].[UserUpdated]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[Save_User].[@Email]">
+						<Property Name="DefaultExpressionScript">
+							<Value><![CDATA[NULL]]></Value>
+						</Property>
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="200" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[Save_User].[@UserName]">
+						<Property Name="DefaultExpressionScript">
+							<Value><![CDATA[NULL]]></Value>
+						</Property>
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="150" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[Save_User].[@Password]">
+						<Property Name="DefaultExpressionScript">
+							<Value><![CDATA[NULL]]></Value>
+						</Property>
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="200" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[Save_User].[@ProfileId]">
+						<Property Name="DefaultExpressionScript">
+							<Value><![CDATA[NULL]]></Value>
+						</Property>
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[uniqueidentifier]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[Save_User].[@UserCreated]">
+						<Property Name="DefaultExpressionScript">
+							<Value><![CDATA[NULL]]></Value>
+						</Property>
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[uniqueidentifier]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[Save_User].[@ErrorCode]">
+						<Property Name="IsOutput" Value="True" />
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[Save_User].[@ErrorMessage]">
+						<Property Name="IsOutput" Value="True" />
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="IsMax" Value="True" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[Save_User].[@UserId]">
+						<Property Name="IsOutput" Value="True" />
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[uniqueidentifier]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="CreateOffset" Value="419" />
+				<Property Name="Length" Value="2325" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="/*&#xD;&#xA;================================================================================&#xD;&#xA;File name          : SaveUser.sql&#xD;&#xA;Description        : Save use store procedure&#xD;&#xA;Autor              : Samir Diaz&#xD;&#xA;Created date       : 2-10-2024&#xD;&#xA;Last update        : 2-10-2024 by Samir Diaz&#xD;&#xA;Vertion            : 1.0&#xD;&#xA;Notes              : notes&#xD;&#xA;================================================================================&#xD;&#xA;*/&#xD;&#xA;CREATE PROCEDURE [dbo].[Save_User]&#xD;&#xA;  @Email VARCHAR(200) = NULL,&#xD;&#xA;  @UserName VARCHAR(150) = NULL,&#xD;&#xA;  @Password VARCHAR(200) = NULL,&#xD;&#xA;  @ProfileId UNIQUEIDENTIFIER = NULL,&#xD;&#xA;  @UserCreated UNIQUEIDENTIFIER = NULL,&#xD;&#xA;  @ErrorCode INT OUT,&#xD;&#xA;  @ErrorMessage VARCHAR(MAX) OUT,&#xD;&#xA;  @UserId UNIQUEIDENTIFIER OUT&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[Select_ModuleByProfile]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+BEGIN
+  SET NOCOUNT ON;
+
+  SELECT
+    A.[ModuleId],
+    B.[ModuleName],
+    B.[ModulePath],
+    B.[Created],
+    B.[Updated],
+    B.[UserCreated],
+    B.[UserUpdated]
+  FROM [Profile_Module] A
+  INNER JOIN [Module] B ON A.[ModuleId] = B.[ModuleId] AND B.[IsActive] = 1
+  
+END]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[Profile_Module]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Module]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Profile_Module].[ModuleId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Module].[ModuleId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Module].[IsActive]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Module].[ModuleName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Module].[ModulePath]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Module].[Created]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Module].[Updated]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Module].[UserCreated]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Module].[UserUpdated]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[Select_ModuleByProfile].[@ProfileId]">
+						<Property Name="DefaultExpressionScript">
+							<Value><![CDATA[NULL]]></Value>
+						</Property>
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[uniqueidentifier]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="CreateOffset" Value="449" />
+				<Property Name="Length" Value="829" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="/*&#xD;&#xA;================================================================================&#xD;&#xA;  File name          : Select_ModuleByProfile.sql&#xD;&#xA;  Description        : get list module by profile&#xD;&#xA;  Autor              : Samir Diaz&#xD;&#xA;  Created date       : 2-10-2024&#xD;&#xA;  Last update        : 2-10-2024 by Samir Diaz&#xD;&#xA;  Vertion            : 1.0&#xD;&#xA;  Notes              : notes&#xD;&#xA;================================================================================&#xD;&#xA;*/&#xD;&#xA;CREATE PROCEDURE [dbo].[Select_ModuleByProfile]&#xD;&#xA;  @ProfileId UNIQUEIDENTIFIER = NULL&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[Select_ModuleList]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+BEGIN
+  SET NOCOUNT ON;
+
+  DECLARE @Offset INT = (@Page - 1) * @RowsPerPage;
+  SELECT @Rows = COUNT(*) FROM [module];
+
+  SELECT
+    [moduleId],
+    [Created],
+    [Updated],
+    [UserCreated],
+    [UserUpdated],
+    [IsActive]
+  FROM [module]
+  ORDER BY [moduleId]
+  OFFSET @Offset ROWS
+  FETCH NEXT @RowsPerPage ROWS ONLY;
+END]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[int]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Select_ModuleList].[@Page]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Select_ModuleList].[@RowsPerPage]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Module]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Select_ModuleList].[@Rows]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Module].[ModuleId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Module].[Created]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Module].[Updated]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Module].[UserCreated]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Module].[UserUpdated]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Module].[IsActive]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[Select_ModuleList].[@Page]">
+						<Property Name="DefaultExpressionScript">
+							<Value><![CDATA[1]]></Value>
+						</Property>
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[Select_ModuleList].[@RowsPerPage]">
+						<Property Name="DefaultExpressionScript">
+							<Value><![CDATA[15]]></Value>
+						</Property>
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[Select_ModuleList].[@Rows]">
+						<Property Name="IsOutput" Value="True" />
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="CreateOffset" Value="449" />
+				<Property Name="Length" Value="902" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="/*&#xD;&#xA;================================================================================&#xD;&#xA;  File name          : Select_ModuleList.sql&#xD;&#xA;  Description        : get module list store procedure&#xD;&#xA;  Autor              : Samir Diaz&#xD;&#xA;  Created date       : 2-10-2024&#xD;&#xA;  Last update        : 2-10-2024 by Samir Diaz&#xD;&#xA;  Vertion            : 1.0&#xD;&#xA;  Notes              : notes&#xD;&#xA;================================================================================&#xD;&#xA;*/&#xD;&#xA;CREATE PROCEDURE [dbo].[Select_ModuleList]&#xD;&#xA;  @Page INT = 1,&#xD;&#xA;  @RowsPerPage INT = 15,&#xD;&#xA;  @Rows INT OUT&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[Select_ProfileList]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+BEGIN
+  SET NOCOUNT ON;
+
+  DECLARE @Offset INT = (@Page - 1) * @RowsPerPage;
+  SELECT @Rows = COUNT(*) FROM [Profile];
+
+  SELECT
+    [ProfileId],
+    [ProfileName],
+    [Created],
+    [Updated],
+    [UserCreated],
+    [UserUpdated],
+    [IsActive]
+  FROM [Profile]
+  ORDER BY [ProfileId]
+  OFFSET @Offset ROWS
+  FETCH NEXT @RowsPerPage ROWS ONLY;
+END]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[int]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Select_ProfileList].[@Page]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Select_ProfileList].[@RowsPerPage]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Profile]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Select_ProfileList].[@Rows]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Profile].[ProfileId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Profile].[ProfileName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Profile].[Created]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Profile].[Updated]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Profile].[UserCreated]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Profile].[UserUpdated]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Profile].[IsActive]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[Select_ProfileList].[@Page]">
+						<Property Name="DefaultExpressionScript">
+							<Value><![CDATA[1]]></Value>
+						</Property>
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[Select_ProfileList].[@RowsPerPage]">
+						<Property Name="DefaultExpressionScript">
+							<Value><![CDATA[15]]></Value>
+						</Property>
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[Select_ProfileList].[@Rows]">
+						<Property Name="IsOutput" Value="True" />
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="CreateOffset" Value="451" />
+				<Property Name="Length" Value="929" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="/*&#xD;&#xA;================================================================================&#xD;&#xA;  File name          : Select_ProfileList.sql&#xD;&#xA;  Description        : get profile list store procedure&#xD;&#xA;  Autor              : Samir Diaz&#xD;&#xA;  Created date       : 2-10-2024&#xD;&#xA;  Last update        : 2-10-2024 by Samir Diaz&#xD;&#xA;  Vertion            : 1.0&#xD;&#xA;  Notes              : notes&#xD;&#xA;================================================================================&#xD;&#xA;*/&#xD;&#xA;CREATE PROCEDURE [dbo].[Select_ProfileList]&#xD;&#xA;  @Page INT = 1,&#xD;&#xA;  @RowsPerPage INT = 15,&#xD;&#xA;  @Rows INT OUT&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[Select_User]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+BEGIN
+  SET NOCOUNT ON;
+
+  SELECT
+    [UserId],
+    [Email],
+    [UserName],
+    [Password],
+    [Created],
+    [Updated],
+    [UserCreated],
+    [UserUpdated],
+    [IsActive]
+  FROM [User]
+  WHERE (@Email IS NOT NULL AND [Email] = @Email)
+  OR (@UserId IS NOT NULL AND [UserId] = @UserId)
+END]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[User]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[User].[UserId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[User].[Email]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[User].[UserName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[User].[Password]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[User].[Created]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[User].[Updated]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[User].[UserCreated]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[User].[UserUpdated]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[User].[IsActive]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Select_User].[@Email]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Select_User].[@UserId]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[Select_User].[@Email]">
+						<Property Name="DefaultExpressionScript">
+							<Value><![CDATA[NULL]]></Value>
+						</Property>
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="200" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[Select_User].[@UserId]">
+						<Property Name="DefaultExpressionScript">
+							<Value><![CDATA[NULL]]></Value>
+						</Property>
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[uniqueidentifier]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="417" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[Select_User]&#xD;&#xA;  @Email VARCHAR(200) = NULL,&#xD;&#xA;  @UserId UNIQUEIDENTIFIER = NULL&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[Select_UserList]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+BEGIN
+  SET NOCOUNT ON;
+
+  DECLARE @Offset INT = (@Page - 1) * @RowsPerPage;
+  SELECT @Rows = COUNT(*) FROM [User];
+  
+  SELECT
+    [UserId],
+    [Email],
+    [UserName],
+    [Created],
+    [Updated],
+    [UserCreated],
+    [UserUpdated],
+    [IsActive]
+  FROM [User]
+  ORDER BY [UserId]
+  OFFSET @Offset ROWS
+  FETCH NEXT @RowsPerPage ROWS ONLY
+END]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[int]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Select_UserList].[@Page]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Select_UserList].[@RowsPerPage]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[User]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Select_UserList].[@Rows]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[User].[UserId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[User].[Email]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[User].[UserName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[User].[Created]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[User].[Updated]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[User].[UserCreated]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[User].[UserUpdated]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[User].[IsActive]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[Select_UserList].[@Page]">
+						<Property Name="DefaultExpressionScript">
+							<Value><![CDATA[1]]></Value>
+						</Property>
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[Select_UserList].[@RowsPerPage]">
+						<Property Name="DefaultExpressionScript">
+							<Value><![CDATA[15]]></Value>
+						</Property>
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[Select_UserList].[@Rows]">
+						<Property Name="IsOutput" Value="True" />
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="475" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[Select_UserList]&#xD;&#xA;  @Page INT = 1,&#xD;&#xA;  @RowsPerPage INT = 15,&#xD;&#xA;  @Rows INT OUT&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlTableType" Name="[dbo].[Type_ModuleList]">
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="SqlTableTypeSimpleColumn" Name="[dbo].[Type_ModuleList].[ModuleId]">
+						<Property Name="IsNullable" Value="True" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[uniqueidentifier]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[Update_Profile]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+BEGIN
+  SET NOCOUNT ON;
+  DECLARE @CurrentDate DATETIME = GETUTCDATE();
+
+  IF @ProfileId IS NULL
+  BEGIN
+    SET @ErrorCode = 1;
+    SET @ErrorMessage = 'Ivalid parameter';
+    RETURN;
+  END
+
+  IF @UserUpdated IS NULL
+  BEGIN
+    SET @ErrorCode = 2;
+    SET @ErrorMessage = 'Ivalid parameter';
+    RETURN;
+  END
+
+  IF EXISTS (SELECT [ProfileId] FROM [Profile] WHERE [ProfileName] = @ProfileName AND [ProfileId] != @ProfileId)
+	BEGIN
+		SET @ErrorCode = 3;
+		SET @ErrorMessage = 'Invalid parameter';
+		RETURN;
+	END
+
+	IF EXISTS (SELECT [ModuleId] FROM @ModuleList WHERE [ModuleId] NOT IN (SELECT [ModuleId] FROM [Module]))
+  BEGIN
+    SET @ErrorCode = 4;
+    SET @ErrorMessage = 'Invalid parameter';
+    RETURN;
+  END
+
+  BEGIN TRANSACTION;
+  BEGIN TRY
+		UPDATE [Profile_Module]
+		SET [IsActive] = 0
+		WHERE [ProfileId] = @ProfileId
+		AND [ModuleId] NOT IN (SELECT A.[ModuleId] FROM @ModuleList A)
+ 
+		INSERT INTO [Profile_Module] (
+      [ProfileId],
+      [ModuleId],
+      [Created],
+      [Updated],
+      [UserCreated],
+      [UserUpdated]
+    )
+		SELECT
+			@ProfileId,
+      A.[ModuleId],
+      @CurrentDate,
+      @CurrentDate,
+      @UserUpdated,
+      @UserUpdated
+		FROM @ModuleList A
+		LEFT JOIN [Profile_Module] B ON A.[ModuleId] = B.[ModuleId] AND B.[ProfileId] = @ProfileId
+		WHERE B.[ModuleId] IS NULL;
+
+    UPDATE [Profile]
+    SET [ProfileName] = @ProfileName,
+				[IsActive] = @IsActive,
+        [Updated] = @CurrentDate,
+        [UserUpdated] = @UserUpdated
+    WHERE [ProfileId] = @ProfileId
+
+    COMMIT TRANSACTION;
+  END TRY
+  BEGIN CATCH
+    SET @ErrorCode = ERROR_NUMBER();
+    SET @ErrorMessage = ERROR_MESSAGE();
+
+    ROLLBACK TRANSACTION;
+  END CATCH
+END]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[datetime]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Update_Profile].[@ProfileId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Update_Profile].[@ErrorCode]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Update_Profile].[@ErrorMessage]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Update_Profile].[@UserUpdated]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Profile]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Profile].[ProfileId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Profile].[ProfileName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Update_Profile].[@ProfileName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Update_Profile].[@ModuleList]" Disambiguator="3" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Update_Profile].[@ModuleList].[ModuleId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Module]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Module].[ModuleId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Profile_Module]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Profile_Module].[IsActive]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Profile_Module].[ProfileId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Profile_Module].[ModuleId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Update_Profile].[@ModuleList].[ModuleId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Profile_Module].[Created]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Profile_Module].[Updated]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Profile_Module].[UserCreated]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Profile_Module].[UserUpdated]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Update_Profile].[@ModuleList].[ModuleId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Profile_Module].[ModuleId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Profile_Module].[ProfileId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Profile]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Profile].[ProfileName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Profile].[IsActive]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Update_Profile].[@IsActive]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Profile].[Updated]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Profile].[UserUpdated]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Profile].[ProfileId]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="DynamicObjects">
+				<Entry>
+					<Element Type="SqlDynamicColumnSource" Name="[dbo].[Update_Profile].[@ModuleList]">
+						<Relationship Name="Columns">
+							<Entry>
+								<Element Type="SqlSimpleColumn" Name="[dbo].[Update_Profile].[@ModuleList].[ModuleId]">
+									<Relationship Name="TypeSpecifier">
+										<Entry>
+											<Element Type="SqlTypeSpecifier">
+												<Relationship Name="Type">
+													<Entry>
+														<References ExternalSource="BuiltIns" Name="[uniqueidentifier]" />
+													</Entry>
+												</Relationship>
+											</Element>
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[Update_Profile].[@ProfileId]">
+						<Property Name="DefaultExpressionScript">
+							<Value><![CDATA[NULL]]></Value>
+						</Property>
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[uniqueidentifier]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[Update_Profile].[@ProfileName]">
+						<Property Name="DefaultExpressionScript">
+							<Value><![CDATA[NULL]]></Value>
+						</Property>
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="150" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[Update_Profile].[@ModuleList]" Disambiguator="3">
+						<Property Name="IsReadOnly" Value="True" />
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References Name="[dbo].[Type_ModuleList]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[Update_Profile].[@IsActive]">
+						<Property Name="DefaultExpressionScript">
+							<Value><![CDATA[1]]></Value>
+						</Property>
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[bit]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[Update_Profile].[@UserUpdated]">
+						<Property Name="DefaultExpressionScript">
+							<Value><![CDATA[NULL]]></Value>
+						</Property>
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[uniqueidentifier]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[Update_Profile].[@ErrorCode]">
+						<Property Name="IsOutput" Value="True" />
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[Update_Profile].[@ErrorMessage]">
+						<Property Name="IsOutput" Value="True" />
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="IsMax" Value="True" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="CreateOffset" Value="445" />
+				<Property Name="Length" Value="2471" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="/*&#xD;&#xA;================================================================================&#xD;&#xA;  File name          : Update_Profile.sql&#xD;&#xA;  Description        : update profile store procedure&#xD;&#xA;  Autor              : Samir Diaz&#xD;&#xA;  Created date       : 2-10-2024&#xD;&#xA;  Last update        : 2-10-2024 by Samir Diaz&#xD;&#xA;  Vertion            : 1.0&#xD;&#xA;  Notes              : notes&#xD;&#xA;================================================================================&#xD;&#xA;*/&#xD;&#xA;CREATE PROCEDURE [Update_Profile]&#xD;&#xA;  @ProfileId UNIQUEIDENTIFIER = NULL,&#xD;&#xA;  @ProfileName VARCHAR(150) = NULL,&#xD;&#xA;  @ModuleList Type_ModuleList READONLY,&#xD;&#xA;  @IsActive BIT = 1,&#xD;&#xA;  @UserUpdated UNIQUEIDENTIFIER = NULL,&#xD;&#xA;  @ErrorCode INT OUT,&#xD;&#xA;  @ErrorMessage VARCHAR(MAX) OUT&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[Update_User]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+BEGIN
+  SET NOCOUNT ON;
+  DECLARE @CurrentDate DATETIME = GETUTCDATE();
+
+	IF @UserId IS NULL
+	BEGIN
+		SET @ErrorCode = 1;
+		SET @ErrorMessage = 'Invalid parameter';
+		RETURN;
+	END
+
+  IF @UserUpdated IS NULL
+  BEGIN
+    SET @ErrorCode = 1;
+    SET @ErrorMessage = 'Ivalid parameter';
+    RETURN;
+  END
+
+  IF @Email IS NULL
+	BEGIN
+		SET @ErrorCode = 2;
+		SET @ErrorMessage = 'Invalid parameter';
+		RETURN;
+	END
+
+	IF @UserName IS NULL
+	BEGIN
+		SET @ErrorCode = 3;
+		SET @ErrorMessage = 'Invalid parameter';
+		RETURN;
+	END
+
+	IF @Password IS NULL
+	BEGIN
+		SET @ErrorCode = 4;
+		SET @ErrorMessage = 'Invalid parameter';
+		RETURN;
+	END
+
+	IF EXISTS (SELECT [UserId] FROM [User] WHERE [Email] = @Email AND [UserId] != @UserId)
+	BEGIN
+		SET @ErrorCode = 5;
+		SET @ErrorMessage = 'Invalid parameter';
+		RETURN;
+	END
+
+  BEGIN TRANSACTION;
+  BEGIN TRY
+    UPDATE [User]
+    SET [Email] = @Email,
+        [UserName] = @UserName,
+				[Password] = @Password,
+				[ProfileId] = @ProfileId,
+				[IsActive] = @IsActive,
+        [Updated] = @CurrentDate,
+        [UserUpdated] = @UserUpdated
+    WHERE [UserId] = @UserId
+
+    COMMIT TRANSACTION;
+  END TRY
+  BEGIN CATCH
+    SET @ErrorCode = ERROR_NUMBER();
+    SET @ErrorMessage = ERROR_MESSAGE();
+
+    ROLLBACK TRANSACTION;
+  END CATCH
+END]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[datetime]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Update_User].[@UserId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Update_User].[@ErrorCode]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Update_User].[@ErrorMessage]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Update_User].[@UserUpdated]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Update_User].[@Email]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Update_User].[@UserName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Update_User].[@Password]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[User]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[User].[UserId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[User].[Email]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[User]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[User].[Email]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[User].[UserName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[User].[Password]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[User].[ProfileId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Update_User].[@ProfileId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[User].[IsActive]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Update_User].[@IsActive]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[User].[Updated]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[User].[UserUpdated]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[User].[UserId]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[Update_User].[@UserId]">
+						<Property Name="DefaultExpressionScript">
+							<Value><![CDATA[NULL]]></Value>
+						</Property>
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[uniqueidentifier]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[Update_User].[@Email]">
+						<Property Name="DefaultExpressionScript">
+							<Value><![CDATA[NULL]]></Value>
+						</Property>
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="200" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[Update_User].[@UserName]">
+						<Property Name="DefaultExpressionScript">
+							<Value><![CDATA[NULL]]></Value>
+						</Property>
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="150" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[Update_User].[@Password]">
+						<Property Name="DefaultExpressionScript">
+							<Value><![CDATA[NULL]]></Value>
+						</Property>
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="200" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[Update_User].[@ProfileId]">
+						<Property Name="DefaultExpressionScript">
+							<Value><![CDATA[NULL]]></Value>
+						</Property>
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[uniqueidentifier]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[Update_User].[@IsActive]">
+						<Property Name="DefaultExpressionScript">
+							<Value><![CDATA[1]]></Value>
+						</Property>
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[bit]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[Update_User].[@UserUpdated]">
+						<Property Name="DefaultExpressionScript">
+							<Value><![CDATA[NULL]]></Value>
+						</Property>
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[uniqueidentifier]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[Update_User].[@ErrorCode]">
+						<Property Name="IsOutput" Value="True" />
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[Update_User].[@ErrorMessage]">
+						<Property Name="IsOutput" Value="True" />
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="IsMax" Value="True" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="CreateOffset" Value="439" />
+				<Property Name="Length" Value="2103" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="/*&#xD;&#xA;================================================================================&#xD;&#xA;  File name          : Update_User.sql&#xD;&#xA;  Description        : update user store procedure&#xD;&#xA;  Autor              : Samir Diaz&#xD;&#xA;  Created date       : 2-10-2024&#xD;&#xA;  Last update        : 2-10-2024 by Samir Diaz&#xD;&#xA;  Vertion            : 1.0&#xD;&#xA;  Notes              : notes&#xD;&#xA;================================================================================&#xD;&#xA;*/&#xD;&#xA;CREATE PROCEDURE [Update_User]&#xD;&#xA;  @UserId UNIQUEIDENTIFIER = NULL,&#xD;&#xA;  @Email VARCHAR(200) = NULL,&#xD;&#xA;  @UserName VARCHAR(150) = NULL,&#xD;&#xA;  @Password VARCHAR(200) = NULL,&#xD;&#xA;&#x9;@ProfileId UNIQUEIDENTIFIER = NULL,&#xD;&#xA;&#x9;@IsActive BIT = 1,&#xD;&#xA;  @UserUpdated UNIQUEIDENTIFIER = NULL,&#xD;&#xA;  @ErrorCode INT OUT,&#xD;&#xA;  @ErrorMessage VARCHAR(MAX) OUT&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlTable" Name="[dbo].[User]">
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[User].[UserId]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[uniqueidentifier]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<AttachedAnnotation Disambiguator="11" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[User].[Email]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="200" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<AttachedAnnotation Disambiguator="13" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[User].[UserName]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="150" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[User].[ProfileId]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[uniqueidentifier]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[User].[Password]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="200" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[User].[Created]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[datetime]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[User].[Updated]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[datetime]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[User].[UserCreated]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[uniqueidentifier]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[User].[UserUpdated]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[uniqueidentifier]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[User].[IsActive]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[bit]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<AttachedAnnotation Disambiguator="7" />
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<AttachedAnnotation Disambiguator="21" />
+			<AttachedAnnotation Disambiguator="22" />
+		</Element>
+	</Model>
+</DataSchemaModel>
